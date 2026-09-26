@@ -1,5 +1,14 @@
 # LinkedIn post draft
 
+**Image to attach to the post:**
+
+![Out-of-sample cumulative returns chart](outputs/cumulative_returns_chart.png)
+
+*(Also hosted at
+https://raw.githubusercontent.com/akshat2122/esg-portfolio-project/main/outputs/cumulative_returns_chart.png
+— download that and upload it as the post's image; LinkedIn needs the file
+attached directly, it won't pull it from a link.)*
+
 ---
 
 I built a small backtest to answer a question I kept seeing debated with no
@@ -54,5 +63,7 @@ report are on GitHub: [link]
 ---
 
 *Notes for posting: swap `[link]` for
-https://github.com/akshat2122/esg-portfolio-project, and consider attaching
-`outputs/cumulative_returns_chart.png` as the post image.*
+https://github.com/akshat2122/esg-portfolio-project. Attach
+`outputs/cumulative_returns_chart.png` (in this repo) as the post's image —
+no LinkedIn integration is connected here, so this file has to be posted
+manually.*

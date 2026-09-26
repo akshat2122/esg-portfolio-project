@@ -1,0 +1,39 @@
+UNIVERSE CONSTRUCTION AND DATA-QUALITY REPORT
+============================================================
+Candidate SBF 120 names considered: 28
+
+-- Price history filter (need >= 3 years) --
+  No names dropped -- all candidates had sufficient price history.
+
+-- ESG data coverage (yfinance) --
+  Names with a full Environmental+Social+Governance score: 0/28
+  Fallback to governance-risk proxy triggered: True
+  Score source actually used for the bottom-quartile screen: governance_risk_proxy
+  NOTE: 28/28 names (100%) had no full ESG score from yfinance (Ticker.sustainability empty / HTTP 404 on Yahoo's quoteSummary ESG module). Falling back to a GOVERNANCE-ONLY proxy score built from Ticker.info risk sub-scores (auditRisk, boardRisk, compensationRisk, shareHolderRightsRisk, overallRisk). This is real live data, but it is NOT a full Environmental+Social+Governance score -- see README.md limitations.
+
+-- Portfolio B ESG screen outcome --
+  Excluded (bottom 25% by ESG/governance-proxy score): ['CA.PA', 'DSY.PA', 'MC.PA', 'RMS.PA', 'RNO.PA', 'SAF.PA', 'SU.PA', 'TTE.PA']
+  Excluded (no ESG score obtainable at all): none
+  Final Portfolio B eligible universe (20 names): ['BNP.PA', 'GLE.PA', 'ACA.PA', 'CS.PA', 'DG.PA', 'AIR.PA', 'KER.PA', 'BN.PA', 'RI.PA', 'OR.PA', 'SAN.PA', 'EL.PA', 'ENGI.PA', 'VIE.PA', 'AI.PA', 'SGO.PA', 'CAP.PA', 'PUB.PA', 'ORA.PA', 'LI.PA']
+
+-- Backtest windows --
+  Training window (in-sample, used to fit weights): 2021-09-28 to 2025-09-25
+  Test window (out-of-sample, weights held fixed):  2025-09-26 to 2026-09-25
+
+-- Sector allocation check (cap = 35% per sector) --
+  Portfolio A (Mean-Variance):
+    Communication Services        20.0%
+    Industrials                   20.0%
+    Utilities                     20.0%
+    Financials                    16.2%
+    Real Estate                   11.6%
+    Consumer Discretionary         7.3%
+    Energy                         3.9%
+    Consumer Staples               1.0%
+  Portfolio B (ESG-Tilted):
+    Financials                    30.9%
+    Utilities                     20.0%
+    Communication Services        20.0%
+    Real Estate                   16.6%
+    Health Care                    9.8%
+    Consumer Staples               2.6%

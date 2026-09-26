@@ -1,0 +1,5 @@
+,Cumulative Return,Annualized Return,Annualized Volatility,Sharpe Ratio,Max Drawdown
+Portfolio A (Mean-Variance),0.186856,0.184466,0.140838,1.132267,-0.105160
+Portfolio B (ESG-Tilted),0.133881,0.132206,0.131941,0.812531,-0.110126
+Equal-Weight Benchmark,0.052668,0.052033,0.133509,0.202478,-0.112992
+Cap-Weighted Benchmark,0.079710,0.078736,0.145626,0.369002,-0.113699

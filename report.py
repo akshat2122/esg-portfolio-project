@@ -68,7 +68,12 @@ def plot_cumulative_returns(results, test_window, path=config.OUTPUT_DIR / "cumu
         # Index to growth of 1 at the start of the test window (already the
         # case from metrics.performance_summary, but re-anchor defensively).
         series = wealth / wealth.iloc[0]
-        ax.plot(series.index, series.values, label=name, color=LINE_COLORS[name],
+        # Display-only label: this project's screen is governance-only (see
+        # README section 3), so the chart calls it "Governance-Tilted" even
+        # though the internal result key stays "ESG-Tilted" for the rest of
+        # the pipeline (results table, weight files, universe report).
+        display_name = name.replace("ESG-Tilted", "Governance-Tilted")
+        ax.plot(series.index, series.values, label=display_name, color=LINE_COLORS[name],
                 linewidth=2, solid_capstyle="round")
         ax.annotate(f"  {name.split(' (')[0]}: {series.iloc[-1]:.2f}x",
                     xy=(series.index[-1], series.iloc[-1]),
